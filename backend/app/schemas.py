@@ -268,3 +268,19 @@ class EmergencydrillEntry(BaseModel):
     field_5: str | None = None  # 演练评估
     field_6: str | None = None  # 改进措施
     field_7: str | None = None  # 演练状态
+
+class SuccessionEntry(BaseModel):
+    """接续计划明细结构。"""
+
+    field_0: str | None = None  # 工作面编号
+    field_1: str | None = None  # 工作面名称
+    field_2: str | None = None  # 所在采区
+    field_3: str | None = None  # 当前版本
+    field_4: str | None = None  # 接续方式
+    field_5: str | None = None  # 计划开工月份
+    field_6: str | None = None  # 计划完工月份
+    field_7: str | None = None  # 实际开工月份
+    field_8: str | None = None  # 实际完工月份
+    field_9: str | None = None  # 偏差(月)
+    field_10: str | None = None  # 衔接结论
+    field_11: str | None = None  # 台账状态
