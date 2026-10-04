@@ -16,7 +16,8 @@ class Store:
         }
 
     def module_names(self) -> list[str]:
-        return sorted(self._tables)
+        # 版本链、进度登记这类附表（名字带下划线）不算独立业务模块，概览里不单独成行
+        return sorted(name for name in self._tables if "_" not in name)
 
     def rows(self, module: str) -> list[dict[str, Any]]:
         return self._tables.setdefault(module, [])
